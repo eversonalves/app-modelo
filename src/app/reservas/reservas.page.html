@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Reservas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="logo-container">
+    <ion-list>
+      <ion-item>
+        <ion-input label="Nome:" placeholder="Digite seu nome"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="E-mail:" placeholder="Digite seu e-mail"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="CPF:" placeholder="Digite seu CPF"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Informações</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Reservas mínima de 24 horas e máxima de 45 dias,
+        apenas uma reserva por dia por CPF.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-datetime></ion-datetime>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title> Rodapé </ion-title>
+  </ion-toolbar>
+</ion-footer>
