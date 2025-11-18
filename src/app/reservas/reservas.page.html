@@ -8,18 +8,53 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <div class="logo-container">
+  <div class="ion-container">
     <ion-list>
       <ion-item>
-        <ion-input label="Nome:" placeholder="Digite seu nome"></ion-input>
+        <ion-input
+          label="Nome"
+          label-placement="floating"
+          fill="outline"
+          placeholder="Nome completo"
+        ></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input label="E-mail:" placeholder="Digite seu e-mail"></ion-input>
+        <ion-input
+          label="E-mail"
+          label-placement="floating"
+          fill="outline"
+          placeholder="seu@email.com"
+        ></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input label="CPF:" placeholder="Digite seu CPF"></ion-input>
+        <ion-input
+          label="CPF"
+          label-placement="floating"
+          maxlength="14"
+          fill="outline"
+          placeholder="***.***.***-**"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Motivo"
+          label-placement="floating"
+          fill="outline"
+          placeholder="Casamento, confraternização etc..."
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Quantidade"
+          maxlength="3"
+          label-placement="floating"
+          fill="outline"
+          placeholder="Numero de pessoas"
+        ></ion-input>
       </ion-item>
     </ion-list>
 
@@ -29,12 +64,29 @@
       </ion-card-header>
 
       <ion-card-content>
-        Reservas mínima de 24 horas e máxima de 45 dias,
-        apenas uma reserva por dia por CPF.
+        Reservas mínima de 24 horas e máxima de 45 dias, apenas uma reserva por
+        dia com o mesmo CPF.
       </ion-card-content>
     </ion-card>
 
     <ion-datetime></ion-datetime>
+
+    <ion-grid>
+      <ion-row class="ion-justify-content-between">
+        <ion-col size="auto">
+          <ion-button id="present-alert" size="small" color="danger">Cancelar</ion-button>
+          <ion-alert trigger="present-alert"
+          header="Você deseja cancelar, sua reserva?">
+          </ion-alert>
+        </ion-col>
+        <ion-col size="auto">
+          <ion-button id="preset-alert" size="small" color="success">Reservar</ion-button>
+          <ion-alert trigger="present-alert"
+          header="Você deseja salvar sua reserva?">
+          </ion-alert>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
 
