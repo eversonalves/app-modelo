@@ -23,4 +23,8 @@ export const routes: Routes = [
     path: 'reservas',
     loadComponent: () => import('./reservas/reservas.page').then( m => m.ReservasPage)
   },
+  {
+    path: 'calendario',
+    loadComponent: () => import('./calendario/calendario.page').then( m => m.CalendarioPage)
+  },
 ];

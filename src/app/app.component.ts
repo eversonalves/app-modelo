@@ -17,7 +17,7 @@ export class AppComponent {
     { title: 'Perfil', url: '/elementos', icon: 'color-filter' },
     { title: 'Reservas', url: '/reservas', icon: 'receipt' },
     { title: 'Login', url: '/login', icon: 'people' },
-    { title: 'Lixeira', url: '/folder/trash', icon: 'trash' },
+    { title: 'Calendário', url: '/calendario', icon: 'calendar-number' },
     { title: 'Spam', url: '/folder/spam', icon: 'warning' },
   ];
  

@@ -62,28 +62,34 @@
       <ion-card-header>
         <ion-card-subtitle>Informações</ion-card-subtitle>
       </ion-card-header>
-
+      
       <ion-card-content>
         Reservas mínima de 24 horas e máxima de 45 dias, apenas uma reserva por
         dia com o mesmo CPF.
       </ion-card-content>
     </ion-card>
 
-    <ion-datetime></ion-datetime>
+    <ion-datetime max="2025-12-30" min="2025-11-20"></ion-datetime>
 
     <ion-grid>
       <ion-row class="ion-justify-content-between">
         <ion-col size="auto">
-          <ion-button id="present-alert" size="small" color="danger">Cancelar</ion-button>
-          <ion-alert trigger="present-alert"
-          header="Você deseja cancelar, sua reserva?">
-          </ion-alert>
+          <ion-button id="cancelar-alert" size="small" color="danger"
+            >Cancelar</ion-button
+          >
+          <ion-alert
+            trigger="cancelar-alert"
+            header="Você deseja cancelar, sua reserva?"
+          ></ion-alert>
         </ion-col>
         <ion-col size="auto">
-          <ion-button id="preset-alert" size="small" color="success">Reservar</ion-button>
-          <ion-alert trigger="present-alert"
-          header="Você deseja salvar sua reserva?">
-          </ion-alert>
+          <ion-button id="confirmar-alert" size="small" color="success"
+            >Reservar</ion-button
+          >
+          <ion-alert
+            trigger="confirmar-alert"
+            header="Você deseja salvar sua reserva?"
+          ></ion-alert>
         </ion-col>
       </ion-row>
     </ion-grid>

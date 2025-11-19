@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Calendario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Escolha uma data</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-datetime
+        presentation="date"
+        [(ngModel)]="dataSelecionada"
+        (ionChange)="adicionarData()"
+      >
+      </ion-datetime>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="ion-padding" *ngIf="listaDatas.length > 0">
+    <ion-list *ngIf="listaDatas.length > 0">
+      <ion-list-header>
+        <ion-label>Data Selecionada</ion-label>
+      </ion-list-header>
+      <ion-list
+        class="ion-padding ion-display-flex ion-align-items-center ion-justify-content-between"
+        *ngFor="let data of listaDatas;let i = index"
+      >
+        <ion-label>{{data | date:'dd/MM/yyyy'}}</ion-label>
+        <ion-button
+          id="excluir-data"
+          (click)="removerData(i)"
+          color="danger"
+          size="small"
+        >
+          Excluir
+        </ion-button>
+        <ion-alert
+          trigger="excluir-data"
+          header="Deseja excluir a data?"
+          [buttons]="alertButtons"
+        ></ion-alert>
+      </ion-list>
+    </ion-list>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title> Rodapé </ion-title>
+  </ion-toolbar>
+</ion-footer>
